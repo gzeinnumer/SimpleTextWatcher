@@ -3,9 +3,9 @@ package com.gzeinnumer.stw;
 import android.text.Editable;
 import android.text.TextWatcher;
 
-import com.gzeinnumer.mylibsimpletextwatcher.interfaceCallBack.AfterTextChanged;
-import com.gzeinnumer.mylibsimpletextwatcher.interfaceCallBack.BeforeTextChanged;
-import com.gzeinnumer.mylibsimpletextwatcher.interfaceCallBack.OnTextChanged;
+import com.gzeinnumer.stw.interfaceCallBack.AfterTextChanged;
+import com.gzeinnumer.stw.interfaceCallBack.BeforeTextChanged;
+import com.gzeinnumer.stw.interfaceCallBack.OnTextChanged;
 
 public class SimpleTextWatcher implements TextWatcher {
 
