@@ -1,0 +1,3 @@
+include ':stw'
+include ':app'
+rootProject.name = "SimpleTextWatcher"
