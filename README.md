@@ -45,6 +45,7 @@ dependencies {
 - [x] [beforeTextChanged](#beforetextchanged)
 - [x] [onTextChanged](#ontextchanged)
 - [x] [afterTextChanged](#aftertextchanged)
+- [x] [Filter Symbol](#filter-symbol)
 
 ---
 # Tech stack and 3rd library
@@ -109,6 +110,45 @@ editText.addTextChangedListener(new SimpleTextWatcher(new AfterTextChanged() {
     }
 }));
 ```
+
+#
+### **Filter Symbol.**
+filter all symbol include space.
+> **Java**
+```java
+TextInputEditText textInputLayout = findViewById(R.id.ed_ed_p);
+TextInputLayout textInputEditText = findViewById(R.id.ed_ed);
+
+//type 1
+textInputEditText.addTextChangedListener(new TextNoSimbol(textInputEditText)); //with TextInputLayout
+
+//type 2
+textInputEditText.addTextChangedListener(new TextNoSimbol(textInputLayout, textInputEditText)); //without TextInputLayout
+
+if (TextNoSimbol.isValidNoSymbol(textInputEditText.getText().toString())){
+    Log.d(getClass().getSimpleName(), "onCreate: include simbol");
+} else {
+    Log.d(getClass().getSimpleName(), "onCreate: not include simbol");
+}
+```
+filter all symbol, but permit some symbol.
+> **Java**
+```java
+String permitedSymbol = "!@#$%^&*( ";
+
+//type 3
+textInputEditText.addTextChangedListener(new TextNoSimbol(textInputLayout, textInputEditText, permitedSymbol));
+
+//validate value
+if (TextNoSimbol.isValidNoSymbol(textInputEditText.getText().toString(), permitedSymbol)){
+    Log.d(getClass().getSimpleName(), "onCreate: include simbol");
+} else {
+    Log.d(getClass().getSimpleName(), "onCreate: not include simbol");
+}
+```
+
+|![]()|![]()|![]()|
+|---|---|---|
 
 ---
 # Version

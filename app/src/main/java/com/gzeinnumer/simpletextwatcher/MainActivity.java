@@ -8,7 +8,10 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 import com.gzeinnumer.stw.SimpleTextWatcher;
+import com.gzeinnumer.stw.TextNoSimbol;
 import com.gzeinnumer.stw.interfaceCallBack.AfterTextChanged;
 import com.gzeinnumer.stw.interfaceCallBack.BeforeTextChanged;
 import com.gzeinnumer.stw.interfaceCallBack.OnTextChanged;
@@ -17,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity_";
     EditText editText;
+    TextInputEditText textInputEditText;
+    TextInputLayout textInputLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +29,27 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         editText = findViewById(R.id.ed);
+        textInputLayout = findViewById(R.id.ed_ed_p);
+        textInputEditText = findViewById(R.id.ed_ed);
+
+        String permitedSymbol = "!@#$%^&*( ";
+
+//        textInputEditText.addTextChangedListener(new TextNoSimbol(textInputEditText));
+//        textInputEditText.addTextChangedListener(new TextNoSimbol(textInputLayout, textInputEditText));
+        textInputEditText.addTextChangedListener(new TextNoSimbol(textInputLayout, textInputEditText, permitedSymbol));
+
+        if (TextNoSimbol.isValidNoSymbol(textInputEditText.getText().toString())) {
+            Log.d(getClass().getSimpleName(), "onCreate: include simbol");
+        } else {
+            Log.d(getClass().getSimpleName(), "onCreate: not include simbol");
+        }
+
+
+        if (TextNoSimbol.isValidNoSymbol(textInputEditText.getText().toString(), permitedSymbol)) {
+            Log.d(getClass().getSimpleName(), "onCreate: include simbol");
+        } else {
+            Log.d(getClass().getSimpleName(), "onCreate: not include simbol");
+        }
 
         before();
 
