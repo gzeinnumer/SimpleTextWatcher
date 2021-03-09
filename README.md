@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-    <a><img src="https://img.shields.io/badge/Version-2.0.0-brightgreen.svg?style=flat"></a>
+    <a><img src="https://img.shields.io/badge/Version-2.1.0-brightgreen.svg?style=flat"></a>
     <a><img src="https://img.shields.io/badge/ID-gzeinnumer-blue.svg?style=flat"></a>
     <a><img src="https://img.shields.io/badge/Java-Suport-green?logo=java&style=flat"></a>
     <a><img src="https://img.shields.io/badge/Kotlin-Suport-green?logo=kotlin&style=flat"></a>
@@ -45,6 +45,7 @@ dependencies {
 - [x] [beforeTextChanged](#beforetextchanged)
 - [x] [onTextChanged](#ontextchanged)
 - [x] [afterTextChanged](#aftertextchanged)
+- [x] [Filter Symbol](#filter-symbol)
 
 ---
 # Tech stack and 3rd library
@@ -110,6 +111,46 @@ editText.addTextChangedListener(new SimpleTextWatcher(new AfterTextChanged() {
 }));
 ```
 
+#
+### **Filter Symbol.**
+filter all symbol include space.
+> **Java**
+```java
+TextInputEditText textInputLayout = findViewById(R.id.ed_ed_p);
+TextInputLayout textInputEditText = findViewById(R.id.ed_ed);
+
+//type 1
+textInputEditText.addTextChangedListener(new TextNoSimbol(textInputEditText)); //with TextInputLayout
+
+//type 2
+textInputEditText.addTextChangedListener(new TextNoSimbol(textInputLayout, textInputEditText)); //without TextInputLayout
+
+//validate value
+if (TextNoSimbol.isValidNoSymbol(textInputEditText.getText().toString())){
+    Log.d(getClass().getSimpleName(), "onCreate: include simbol");
+} else {
+    Log.d(getClass().getSimpleName(), "onCreate: not include simbol");
+}
+```
+filter all symbol, but permit some symbol.
+> **Java**
+```java
+String permitedSymbol = "!@#$%^&*( ";
+
+//type 3
+textInputEditText.addTextChangedListener(new TextNoSimbol(textInputLayout, textInputEditText, permitedSymbol));
+
+//validate value
+if (TextNoSimbol.isValidNoSymbol(textInputEditText.getText().toString(), permitedSymbol)){
+    Log.d(getClass().getSimpleName(), "onCreate: include simbol");
+} else {
+    Log.d(getClass().getSimpleName(), "onCreate: not include simbol");
+}
+```
+
+|![](https://github.com/gzeinnumer/SimpleTextWatcher/blob/master/example/example1.gif)|![](https://github.com/gzeinnumer/SimpleTextWatcher/blob/master/example/example2.gif)|![](https://github.com/gzeinnumer/SimpleTextWatcher/blob/master/example/example3.gif)|
+|---|---|---|
+
 ---
 # Version
 - **1.0.0**
@@ -118,6 +159,8 @@ editText.addTextChangedListener(new SimpleTextWatcher(new AfterTextChanged() {
   - Simple CallBack
 - **2.0.0**
   - Support SDK 16
+- **2.1.0**
+  - new feature TextNoSimbol
 
 ---
 # Contribution
