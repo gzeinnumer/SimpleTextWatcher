@@ -119,10 +119,10 @@ filter all symbol include space.
 TextInputEditText textInputLayout = findViewById(R.id.ed_ed_p);
 TextInputLayout textInputEditText = findViewById(R.id.ed_ed);
 
-//type 1
+//TYPE 1
 textInputEditText.addTextChangedListener(new TextNoSimbol(textInputEditText)); //with TextInputLayout
 
-//type 2
+//TYPE 2
 textInputEditText.addTextChangedListener(new TextNoSimbol(textInputLayout, textInputEditText)); //without TextInputLayout
 
 //validate value
@@ -137,7 +137,7 @@ filter all symbol, but permit some symbol.
 ```java
 String permitedSymbol = "!@#$%^&*( ";
 
-//type 3
+//TYPE 3
 textInputEditText.addTextChangedListener(new TextNoSimbol(textInputLayout, textInputEditText, permitedSymbol));
 
 //validate value
@@ -150,6 +150,7 @@ if (TextNoSimbol.isValidNoSymbol(textInputEditText.getText().toString(), permite
 
 |![](https://github.com/gzeinnumer/SimpleTextWatcher/blob/master/example/example1.gif)|![](https://github.com/gzeinnumer/SimpleTextWatcher/blob/master/example/example2.gif)|![](https://github.com/gzeinnumer/SimpleTextWatcher/blob/master/example/example3.gif)|
 |---|---|---|
+|TYPE 1|TYPE 2|TYPE 3|
 
 ---
 # Version
