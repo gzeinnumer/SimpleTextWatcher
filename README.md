@@ -125,6 +125,7 @@ textInputEditText.addTextChangedListener(new TextNoSimbol(textInputEditText)); /
 //type 2
 textInputEditText.addTextChangedListener(new TextNoSimbol(textInputLayout, textInputEditText)); //without TextInputLayout
 
+//validate value
 if (TextNoSimbol.isValidNoSymbol(textInputEditText.getText().toString())){
     Log.d(getClass().getSimpleName(), "onCreate: include simbol");
 } else {
@@ -147,7 +148,7 @@ if (TextNoSimbol.isValidNoSymbol(textInputEditText.getText().toString(), permite
 }
 ```
 
-|![]()|![]()|![]()|
+|![](https://github.com/gzeinnumer/SimpleTextWatcher/blob/dev-1/example/example1.gif)|![](https://github.com/gzeinnumer/SimpleTextWatcher/blob/dev-1/example/example2.gif)|![](https://github.com/gzeinnumer/SimpleTextWatcher/blob/dev-1/example/example3.gif)|
 |---|---|---|
 
 ---
