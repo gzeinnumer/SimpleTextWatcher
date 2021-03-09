@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-    <a><img src="https://img.shields.io/badge/Version-2.0.0-brightgreen.svg?style=flat"></a>
+    <a><img src="https://img.shields.io/badge/Version-2.1.0-brightgreen.svg?style=flat"></a>
     <a><img src="https://img.shields.io/badge/ID-gzeinnumer-blue.svg?style=flat"></a>
     <a><img src="https://img.shields.io/badge/Java-Suport-green?logo=java&style=flat"></a>
     <a><img src="https://img.shields.io/badge/Kotlin-Suport-green?logo=kotlin&style=flat"></a>
@@ -148,7 +148,7 @@ if (TextNoSimbol.isValidNoSymbol(textInputEditText.getText().toString(), permite
 }
 ```
 
-|![](https://github.com/gzeinnumer/SimpleTextWatcher/blob/dev-1/example/example1.gif)|![](https://github.com/gzeinnumer/SimpleTextWatcher/blob/dev-1/example/example2.gif)|![](https://github.com/gzeinnumer/SimpleTextWatcher/blob/dev-1/example/example3.gif)|
+|![](https://github.com/gzeinnumer/SimpleTextWatcher/blob/master/example/example1.gif)|![](https://github.com/gzeinnumer/SimpleTextWatcher/blob/master/example/example2.gif)|![](https://github.com/gzeinnumer/SimpleTextWatcher/blob/master/example/example3.gif)|
 |---|---|---|
 
 ---
@@ -159,6 +159,8 @@ if (TextNoSimbol.isValidNoSymbol(textInputEditText.getText().toString(), permite
   - Simple CallBack
 - **2.0.0**
   - Support SDK 16
+- **2.1.0**
+  - new feature TextNoSimbol
 
 ---
 # Contribution
