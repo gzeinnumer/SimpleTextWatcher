@@ -11,8 +11,7 @@
         android:text="Hello World!"
         android:id="@+id/ed"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="gone" />
+        android:layout_height="wrap_content" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/ed_ed_p"
@@ -21,7 +20,7 @@
         android:layout_height="wrap_content"
         android:hint="Hint">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <EditText
             android:id="@+id/ed_ed"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />

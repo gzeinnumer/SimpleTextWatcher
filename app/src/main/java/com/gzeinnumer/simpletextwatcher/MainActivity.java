@@ -8,7 +8,6 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.gzeinnumer.stw.SimpleTextWatcher;
 import com.gzeinnumer.stw.TextNoSimbol;
@@ -20,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity_";
     EditText editText;
-    TextInputEditText textInputEditText;
+    EditText textInputEditText;
     TextInputLayout textInputLayout;
 
     @Override
@@ -32,6 +31,14 @@ public class MainActivity extends AppCompatActivity {
         textInputLayout = findViewById(R.id.ed_ed_p);
         textInputEditText = findViewById(R.id.ed_ed);
 
+        textNoSymbol();
+
+        before();
+
+        after();
+    }
+
+    private void textNoSymbol() {
         String permitedSymbol = "!@#$%^&*( ";
 
 //        textInputEditText.addTextChangedListener(new TextNoSimbol(textInputEditText));
@@ -50,10 +57,6 @@ public class MainActivity extends AppCompatActivity {
         } else {
             Log.d(getClass().getSimpleName(), "onCreate: not include simbol");
         }
-
-        before();
-
-        after();
     }
 
     private void before() {
