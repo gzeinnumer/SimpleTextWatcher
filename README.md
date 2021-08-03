@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-    <a><img src="https://img.shields.io/badge/Version-2.1.0-brightgreen.svg?style=flat"></a>
+    <a><img src="https://img.shields.io/badge/Version-2.2.0-brightgreen.svg?style=flat"></a>
     <a><img src="https://img.shields.io/badge/ID-gzeinnumer-blue.svg?style=flat"></a>
     <a><img src="https://img.shields.io/badge/Java-Suport-green?logo=java&style=flat"></a>
     <a><img src="https://img.shields.io/badge/Kotlin-Suport-green?logo=kotlin&style=flat"></a>
@@ -46,6 +46,7 @@ dependencies {
 - [x] [onTextChanged](#ontextchanged)
 - [x] [afterTextChanged](#aftertextchanged)
 - [x] [Filter Symbol](#filter-symbol)
+- [x] [Disable Space Zero](#disable-space-zero)
 
 ---
 # Tech stack and 3rd library
@@ -148,8 +149,24 @@ if (TextNoSimbol.isValidNoSymbol(textInputEditText.getText().toString(), permite
 }
 ```
 
-|![](https://github.com/gzeinnumer/SimpleTextWatcher/blob/master/example/example1.gif)|![](https://github.com/gzeinnumer/SimpleTextWatcher/blob/master/example/example2.gif)|![](https://github.com/gzeinnumer/SimpleTextWatcher/blob/master/example/example3.gif)|
-|---|---|---|
+#
+### **Disable Space Zero.**
+
+Disable space and zero at first.
+> **Java**
+```java
+EditText editText = findViewById(R.id.ed);
+EditText textInputEditText = findViewById(R.id.ed_ed);
+
+//disable Zero
+new CharAtFirst().disableZero(editText, textInputEditText);
+
+//disable Space
+new CharAtFirst().disableSpace(editText, textInputEditText);
+
+//disable Space Zero
+new CharAtFirst().disableZeroSpace(editText, textInputEditText);
+```
 
 ---
 # Version
@@ -161,6 +178,8 @@ if (TextNoSimbol.isValidNoSymbol(textInputEditText.getText().toString(), permite
   - Support SDK 16
 - **2.1.0**
   - new feature TextNoSimbol
+- **2.2.0**
+  - new feature Disable Zero Or Space
 
 ---
 # Contribution

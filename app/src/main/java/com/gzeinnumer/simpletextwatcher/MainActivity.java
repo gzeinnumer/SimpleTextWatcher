@@ -9,6 +9,7 @@ import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.textfield.TextInputLayout;
+import com.gzeinnumer.stw.CharAtFirst;
 import com.gzeinnumer.stw.SimpleTextWatcher;
 import com.gzeinnumer.stw.TextNoSimbol;
 import com.gzeinnumer.stw.interfaceCallBack.AfterTextChanged;
@@ -36,6 +37,10 @@ public class MainActivity extends AppCompatActivity {
         before();
 
         after();
+
+//        new CharAtFirst().disableZero(editText, textInputEditText);
+//        new CharAtFirst().disableSpace(editText, textInputEditText);
+//        new CharAtFirst().disableZeroSpace(editText, textInputEditText);
     }
 
     private void textNoSymbol() {
