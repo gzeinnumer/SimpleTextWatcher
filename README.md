@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-    <a><img src="https://img.shields.io/badge/Version-2.2.0-brightgreen.svg?style=flat"></a>
+    <a><img src="https://img.shields.io/badge/Version-2.2.1-brightgreen.svg?style=flat"></a>
     <a><img src="https://img.shields.io/badge/ID-gzeinnumer-blue.svg?style=flat"></a>
     <a><img src="https://img.shields.io/badge/Java-Suport-green?logo=java&style=flat"></a>
     <a><img src="https://img.shields.io/badge/Kotlin-Suport-green?logo=kotlin&style=flat"></a>
@@ -180,6 +180,8 @@ new CharAtFirst().disableZeroSpace(editText, textInputEditText);
   - new feature TextNoSimbol
 - **2.2.0**
   - new feature Disable Zero Or Space
+- **2.2.1**
+  - Bug Fizing 
 
 ---
 # Contribution
