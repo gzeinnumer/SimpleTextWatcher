@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
 //        new CharAtFirst().disableZero(editText, textInputEditText);
 //        new CharAtFirst().disableSpace(editText, textInputEditText);
-//        new CharAtFirst().disableZeroSpace(editText, textInputEditText);
+        new CharAtFirst().disableZeroSpace(editText, textInputEditText);
     }
 
     private void textNoSymbol() {
